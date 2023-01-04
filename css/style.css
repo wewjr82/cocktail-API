@@ -52,8 +52,12 @@ header {
           flex-grow: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
+  background-image: -webkit-linear-gradient(90deg, #808080 5%, #ededed 100%);
+    background-image:    -moz-linear-gradient(90deg, #808080 5%, #ededed 100%);
+    background-image:     -ms-linear-gradient(90deg, #808080 5%, #ededed 100%);
+ 
   
 }
 
@@ -78,7 +82,7 @@ main {
 }
 
 footer {
-  border: 1px solid red;
+ 
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -webkit-box-flex: 0;
@@ -89,6 +93,10 @@ footer {
   font-family: Lucida Console;
   font-variant: small-caps;
   padding: 20px;
+    text-align: center;
+  background-image: -webkit-linear-gradient(90deg, #808080 5%, #ededed 100%);
+    background-image:    -moz-linear-gradient(90deg, #808080 5%, #ededed 100%);
+    background-image:     -ms-linear-gradient(90deg, #808080 5%, #ededed 100%);
 }
 
 /******************************************
@@ -127,6 +135,14 @@ h1 {
   /* text-align: left; */
   font-family: Lucida Console;
   font-variant: small-caps;
+  font-size: 80px;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+   
+	
+  
+
 }
 
 h2 {

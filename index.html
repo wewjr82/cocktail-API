@@ -6,7 +6,7 @@
     <meta name="keywords" content="one, two, three" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blank Template</title>
+    <title>Potion Ocean</title>
 
     <!-- external CSS link -->
 
@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="container">
-      <header><h1>Cocktails That Anyone Can Make</h1></header>
+      <header><h1>Potion Ocean</h1></header>
       <main>
         <!-- <p>For these simple drinks to be amazing, you don't need to be a bartender! These well-known cocktails can actually be created at home and are great for wowing guests.</p> -->
         <div class="drink-info">
@@ -35,15 +35,14 @@
             typing in your favorite alchohlic beverage below:
           </p>
 
-          <input type="text"  />
-          <button type="button" >Get Cocktail</button>
+          <input type="text" />
+          <button type="button">Get Cocktail</button>
 
           <h2>Name</h2>
           <img src="" alt="" />
           <br />
           <div class="ingredients-div">
             <h4>Ingredients</h4>
-            
           </div>
 
           <br />
@@ -51,9 +50,18 @@
           <br />
         </div>
       </main>
-      <footer></footer>
+      <footer>
+        <div id="copyright" align="center">
+          &copy; 2022 - 2023 www.potionocean.com
+        </div>
+      </footer>
     </div>
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js">
+      (function(){
+      	let cpr = document.getElementById("copyright");
+      	cpr.innerHTML = "&copy; 2022 - "+new Date().getFullYear()+" www.potionocean.com - All Rights Reserved.";
+      })();
+    </script>
   </body>
 </html>
