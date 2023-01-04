@@ -1,6 +1,9 @@
+
+
 /* Box Model Hack */
 * {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html,
@@ -9,9 +12,10 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /******************************************
@@ -19,35 +23,50 @@ html {
 /*******************************************/
 
 body {
-  padding: 0;
-  margin: 0;
-  line-height: 1.5;
   font-size: 160%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {
-  flex-basis: 100%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  text-align: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 20px;
+  text-align: center;
   
 }
 
 main {
   
-  flex-basis: 100%;
-  flex-grow: 1;
-  flex-shrink: 0;
+  -ms-flex-preferred-size: 100%;
+  
+      flex-basis: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   background: url(/imgs/adam-jaime-dmkmrNptMpw-unsplash.jpg) no-repeat center
     center fixed;
   background-size: cover;
@@ -60,27 +79,33 @@ main {
 
 footer {
   border: 1px solid red;
-  flex-basis: 100%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  padding: 20px;
-  font-variant: small-caps;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-family: Lucida Console;
+  font-variant: small-caps;
+  padding: 20px;
 }
 
 /******************************************
 /* INNER STYLES
 /*******************************************/
 .drink-info {
-  width: fit-content;
-  background-color: rgba(0, 0, 0, 0.753);
-  border: 2px solid grey;
-  border-radius: 1%;
-  -webkit-border-radius: 1%;
   -moz-border-radius: 1%;
   -ms-border-radius: 1%;
   -o-border-radius: 1%;
+  -webkit-border-radius: 1%;
+  background-color: rgba(0, 0, 0, 0.753);
+  border-radius: 1%;
+  border: 2px solid grey;
   padding: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 p,
@@ -91,47 +116,51 @@ h3 {
 }
 
 p {
-  padding: 0px 30px;
   color: white;
-  font-variant: small-caps;
   font-family: Lucida Console;
   font-size: 2rem;
+  font-variant: small-caps;
+  padding: 0px 30px;
 }
 
 h1 {
   /* text-align: left; */
-  font-variant: small-caps;
   font-family: Lucida Console;
+  font-variant: small-caps;
 }
 
 h2 {
-  font-variant: small-caps;
-  font-family: Lucida Console;
   color: white;
+  font-family: Lucida Console;
+  font-variant: small-caps;
 }
 
 h3 {
-  border: 2px solid grey;
-  width: fit-content;
-  margin: auto;
-  display: block;
-  padding: 20px;
   background-color: black;
+  border: 2px solid grey;
   color: white;
-  font-variant: small-caps;
+  display: block;
   font-family: Lucida Console;
+  font-variant: small-caps;
+  margin: auto;
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .ingredients-div{
-  border: 2px solid grey;
-  width: fit-content;
-  margin: auto;
-  display: block;
-  padding: 20px;
   background-color: black;
+  border: 2px solid grey;
   color: white;
-  font-variant: small-caps;
+  display: block;
   font-family: Lucida Console;
+  font-variant: small-caps;
+  margin: auto;
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   
 }
 
@@ -152,8 +181,8 @@ li{
 
 input,
 button {
-  margin: auto;
   display: block;
+  margin: auto;
 }
 
 input {
@@ -165,12 +194,8 @@ button {
 }
 
 img {
-  width: 25%;
+  border-radius: 50%;
   display: block;
   margin: 0 auto;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  width: 25%;
 }
