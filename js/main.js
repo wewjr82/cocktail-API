@@ -14,8 +14,6 @@ btn.addEventListener("click", (getDrink) => {
       document.querySelector("img").src = data.drinks[0].strDrinkThumb;
       document.querySelector("h3").innerText = data.drinks[0].strInstructions;
       ingredientsDiv.appendChild(cocktailIngredients);
-      
-     
 
       const getIngredients = Object.keys(data.drinks[0])
         .filter(function (ingredient) {
@@ -28,8 +26,23 @@ btn.addEventListener("click", (getDrink) => {
           return ingredients;
         }, {});
 
-      for (let key in getIngredients) {
-        let value = getIngredients[key];
+      // const nextDrink = function () {
+      //   const currentDrinkIndex = data.drinks.indexOf(data.drink);
+      //   const nextDrinkIndex = currentDrinkIndex + 1;
+      //   if (nextDrinkIndex < data.drinks.length) {
+      //     data.drink = data.drinks[nextDrinkIndex];
+      //   }
+      // };
+
+      // Clear the list of ingredients.
+      cocktailIngredients.innerHTML = "";
+
+      // Get the ingredients for the next drink.
+      const nextIngredients = getIngredients;
+
+      // Add the ingredients to the list.
+      for (let key in nextIngredients) {
+        let value = nextIngredients[key];
         listItem = document.createElement("li");
         listItem.innerHTML = value;
         cocktailIngredients.appendChild(listItem);
