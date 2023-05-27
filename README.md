@@ -3,6 +3,9 @@
 
 Link to project: https://golden-bavarois-08239c.netlify.app/
 
+![screencapture-golden-bavarois-08239c-netlify-app-2023-05-27-05_25_23](https://github.com/wewjr82/cocktail-API/assets/68568420/cff86334-de53-4093-8233-5d3b7a3c97df)
+
+
 <h2>How It's Made:</h2>
 <p>Tech used: HTML, CSS, & JavaScript</p>
 
