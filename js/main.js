@@ -1,9 +1,9 @@
 let btn = document.querySelector("button");
+let cocktailIngredients = document.createElement("ul"); 
 
 btn.addEventListener("click", (getDrink) => {
   let drinkChoice = document.querySelector("input").value;
   const ingredientsDiv = document.querySelector(".ingredients-div");
-  const cocktailIngredients = document.createElement("ul");
   const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkChoice}`;
 
   fetch(url)
@@ -26,14 +26,6 @@ btn.addEventListener("click", (getDrink) => {
           return ingredients;
         }, {});
 
-      // const nextDrink = function () {
-      //   const currentDrinkIndex = data.drinks.indexOf(data.drink);
-      //   const nextDrinkIndex = currentDrinkIndex + 1;
-      //   if (nextDrinkIndex < data.drinks.length) {
-      //     data.drink = data.drinks[nextDrinkIndex];
-      //   }
-      // };
-
       // Clear the list of ingredients.
       cocktailIngredients.innerHTML = "";
 
@@ -43,7 +35,7 @@ btn.addEventListener("click", (getDrink) => {
       // Add the ingredients to the list.
       for (let key in nextIngredients) {
         let value = nextIngredients[key];
-        listItem = document.createElement("li");
+        let listItem = document.createElement("li");
         listItem.innerHTML = value;
         cocktailIngredients.appendChild(listItem);
       }
@@ -52,3 +44,4 @@ btn.addEventListener("click", (getDrink) => {
       console.log(`error ${err}`);
     });
 });
+
