@@ -215,3 +215,102 @@ img {
   margin: 0 auto;
   width: 25%;
 }
+
+/******************************************
+/* MOBILE STYLES
+/*******************************************/
+
+/* LAYOUT */
+@media screen and (max-width: 768px) {
+  header {
+    /* Remove flexbox layout */
+    display: block;
+
+    /* Padding for smaller screens */
+    padding: 10px 0;
+  }
+
+  main {
+    /* Remove background image and grayscale filter */
+    background: none;
+    -webkit-filter: none;
+    filter: none;
+
+    /* Padding for smaller screens */
+    padding: 0 10px;
+  }
+
+  footer {
+    /* Remove flexbox layout */
+    display: block;
+
+    /* Padding for smaller screens */
+    padding: 10px 0;
+  }
+}
+
+/* INNER STYLES */
+@media screen and (max-width: 768px) {
+  .drink-info {
+    border-radius: 0;
+    border: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+  p,
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 50px;
+    -webkit-text-stroke-width: 0.75px;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-fill-color: #000000;
+  }
+
+  h3 {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .ingredients-div {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  h4 {
+    text-align: center;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: disc;
+    padding-right: 30px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  input,
+  button {
+    display: block;
+    /* margin: 10px 0; */
+    margin: 0 auto;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  img {
+    border-radius: 0;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
